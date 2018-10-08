@@ -1,0 +1,23 @@
+@import "variables";
+
+#register-success {
+  text-align: center;
+  margin-top: 5vh;
+  h1 {
+    font-size: 70px;
+    line-height: 1.25;
+    color: $success-color;
+    font-weight: 900;
+  }
+
+  .description {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .next-btn {
+    max-width: 250px;
+    cursor: pointer;
+    width: 100%;
+  }
+}

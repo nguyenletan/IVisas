@@ -1,0 +1,45 @@
+@import "_variables";
+
+.vs-navbar {
+  color: $home_color;
+  .vs-navbar-item {
+    margin-right: 50px;
+    a {
+      font-size: 16px !important;
+      color: $home_color !important;
+      font-weight: 400;
+      line-height: 70px;
+      span {
+        display: inline-block;
+        line-height: 1;
+        padding-left: 7px;
+      }
+      i {
+        color: $active-color;
+      }
+      span,
+      i {
+        vertical-align: middle;
+      }
+    }
+    .partner-channel-btn {
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
+    .router-link-active {
+      color: $active-color !important;
+      font-weight: 700;
+    }
+    .menu-icon {
+    }
+  }
+
+  .vs-navbar-item:last-child {
+    margin-right: 100px;
+  }
+}
+
+header.vs-navbar .vs-navbar-item-primary:hover > a {
+  color: $active-color !important;
+  font-weight: 700;
+}

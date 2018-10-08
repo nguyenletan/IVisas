@@ -1,0 +1,59 @@
+@import "variables";
+
+#user-registration-or-login {
+  margin-top: 2vh;
+  .container.container-border {
+    max-height: 100%;
+  }
+
+  .title {
+    margin-left: 2rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: $header-color;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  form {
+    margin-left: 2rem;
+  }
+
+  .vs-input {
+    width: 450px;
+  }
+
+  .description,
+  .forgot-password {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  .forgot-password {
+    margin-top: 0;
+  }
+
+  .signup-btn, .signin-btn {
+    max-width: 250px;
+    cursor: pointer;
+    width: 100%;
+    -webkit-appearance: none;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    height: 66px;
+    background-color: transparent;
+  }
+  .signup-btn {
+    background-image: url("../images/signup-btn.png");
+  }
+  .signin-btn {
+    background-image: url("../images/signin-btn.png");
+  }
+
+  .user-registration-background {
+    width: 100%;
+  }
+}

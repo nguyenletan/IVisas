@@ -1,0 +1,98 @@
+@import "_variables";
+
+body {
+  font-family: "Lato", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $body-color !important;
+  font-size: 18px !important;
+}
+
+::selection{
+  background-color: $success-color;
+  color: white;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-left: 2rem;
+  background: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  width: 128px;
+}
+
+.container.container-border {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1.83px 7.32px 5.13px rgba(0, 0, 0, 0.1);
+  max-width: 70% !important;
+  max-height: 90vh;
+  padding: 5vh;
+  margin-bottom: 8vh;
+}
+
+a {
+  transition: all .3s ease-in-out;
+}
+
+.container.back-link {
+  max-width: 70% !important;
+  padding: 5px 0 20px 0;
+  a {
+    color: $success-color !important;
+    border-bottom: 1px solid $success-color;
+    transition: all .2s ease-in-out;
+  }
+  a:hover{
+    text-decoration: none !important;
+    color: $active-color !important;
+    border-bottom: 1px solid $active-color;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.vs-input-label {
+  color: $label-color !important;
+  margin-top: 20px;
+  padding-left: 1px !important;
+  font-size: 18px !important;
+  font-style: italic;
+}
+
+.vs-con-input-label > span {
+  min-height: 20px;
+  width: auto;
+  display: block;
+}
+
+.vs-con-input-label .vs-con-input .vs-inputx {
+  border-radius: 3px !important;
+  border-color: $border-color;
+  background-size: 1px 10px;
+  background: white repeat-x;
+}
+
+.vs-con-input-label .vs-con-input .icon-inputx.icon-after {
+  border-left: none !important;
+  right: 25px !important;
+  font-size: 23px;
+}
+
+.vs-component.con-vs-checkbox {
+  justify-content: left;
+  margin-left: 0;
+}
+
+.clear-end {
+}
