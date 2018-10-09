@@ -11,7 +11,7 @@
         <router-link to="/"><i class="material-icons">home</i><span>Home</span></router-link>
       </vs-navbar-item>
       <vs-navbar-item index="1">
-        <a href="#">About Us</a>
+        <a href="#"><i class="material-icons">person_outline</i><span>About Us</span></a>
       </vs-navbar-item>
       <vs-navbar-item index="2">
         <a href="#"><i class="material-icons">mail_outline</i><span>Contact</span></a>

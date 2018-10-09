@@ -1,0 +1,38 @@
+@import "variables";
+
+#user-request-government, #user-request-company, #user-request-university {
+  .ddr-img, .company-logo, .university-logo {
+    display: block;
+    width: 12%;
+    margin: 25px auto 0;
+  }
+
+  h1 {
+    color: #006afb;
+    text-transform: capitalize;
+    font-size: 45px;
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .request-options {
+    list-style-type: none;
+    width: 60%;
+    text-align: left;
+    color: #000;
+    margin: 0 auto 40px;
+    li {
+      margin-top: 18px;
+    }
+    .con-vs-radio {
+      justify-content: start;
+    }
+  }
+  .next-btn {
+    width: 25%;
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
