@@ -1,0 +1,108 @@
+@import "variables";
+.sidebar {
+  width: 260px;
+  position: fixed;
+  z-index: 1010;
+  margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  .vs-sidebar-background {
+    display: none;
+  }
+
+  .vs-sidebar {
+    min-height: 100vh;
+    background-image: url("../images/sidebar-background.png");
+    background-size: contain;
+    background-repeat: repeat;
+  }
+
+  .vs-sidebar header {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .name {
+    font-size: 14px;
+    color: $sidebar-text-color;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .vs-sidebar .vs-sidebar-items {
+    margin-top: 20px;
+    color: $sidebar-text-color;
+  }
+  .vs-sidebar .vs-sidebar-items .vs-sidebar-item a {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .vs-sidebar .vs-sidebar-items .vs-sidebar-item a:hover {
+    font-weight: 700;
+    color: $sidebar-text-color !important;
+  }
+
+  .vs-sidebar .vs-sidebar-items .vs-sidebar-item-active a {
+    font-weight: 700;
+    color: $sidebar-text-color !important;
+  }
+
+  .sidebar-divider {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: block;
+    width: 30%;
+    margin: 25px auto;
+  }
+
+  .avatar {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+  }
+
+  .vs-sidebar header {
+    padding-top: 0;
+  }
+  .header-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      > button {
+        margin-left: 10px;
+      }
+    }
+  }
+  .footer-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    > button {
+      border: 0 solid rgba(0, 0, 0, 0) !important;
+      border-left: 1px solid rgba(0, 0, 0, 0.07) !important;
+      border-radius: 0 !important;
+    }
+  }
+}

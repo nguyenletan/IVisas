@@ -9,6 +9,7 @@ import UserConnecting from "./views/UserConnecting";
 import UserRequestGovernment from "./views/UserRequestGovernment";
 import UserRequestCompany from "./views/UserRequestCompany";
 import UserRequestUniversity from "./views/UserRequestUniversity";
+import UserDashboard from "./views/UserDashboard";
 
 Vue.use(Router);
 
@@ -20,6 +21,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/user-dashboard",
+      name: "UserDashboard",
+      component: UserDashboard
     },
     {
       path: "/login",

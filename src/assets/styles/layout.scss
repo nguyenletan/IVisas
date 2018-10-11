@@ -6,9 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $body-color !important;
   font-size: 18px !important;
+  background: #fff;
 }
 
-::selection{
+::selection {
   background-color: $success-color;
   color: white;
 }
@@ -25,7 +26,7 @@ body {
 }
 
 .container.container-border {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -37,7 +38,7 @@ body {
 }
 
 a {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .container.back-link {
@@ -46,9 +47,9 @@ a {
   a {
     color: $success-color !important;
     border-bottom: 1px solid $success-color;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
-  a:hover{
+  a:hover {
     text-decoration: none !important;
     color: $active-color !important;
     border-bottom: 1px solid $active-color;
@@ -80,7 +81,8 @@ a {
   border-radius: 3px !important;
   border-color: $border-color;
   background-size: 1px 10px;
-  background: white repeat-x;
+  background: white url("../images/input-background.png") repeat-x;
+  background-size: 1px 10px;
 }
 
 .vs-con-input-label .vs-con-input .icon-inputx.icon-after {
