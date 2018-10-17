@@ -85,15 +85,20 @@ a {
   background-size: 1px 10px;
 }
 
-.vs-con-input-label .vs-con-input .icon-inputx.icon-after {
+.vs-con-input-label .vs-con-input .icon-inputx.icon-after{
   border-left: none !important;
   right: 25px !important;
   font-size: 23px;
 }
 
+
 .vs-component.con-vs-checkbox {
   justify-content: left;
   margin-left: 0;
+}
+
+.v-date-picker-table .v-btn.v-btn--active {
+  color: #006afb;
 }
 
 .clear-end {

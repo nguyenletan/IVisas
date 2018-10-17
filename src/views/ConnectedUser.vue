@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import "@/assets/styles/register-success.scss";
+import "@/assets/styles/register-and-send-request-success.scss";
 
 export default {
   name: "ConnectedUser"

@@ -1,6 +1,22 @@
 @import "variables";
 
-#user-registration-or-login {
+#fill-information-for-government {
+  form {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+#fill-information-for-government .vs-input {
+  width: 100%;
+}
+
+#user-registration-or-login .vs-input {
+  width: 450px;
+}
+
+#user-registration-or-login,
+#fill-information-for-government {
   margin-top: 2vh;
   .container.container-border {
     max-height: 100%;
@@ -8,19 +24,25 @@
 
   .title {
     margin-left: 2rem;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 0;
     color: $header-color;
     font-weight: 700;
     font-size: 18px;
   }
+  h1.title {
+    font-size: 23px !important;
+  }
+
+  .description {
+    margin-left: 2rem;
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+  }
 
   form {
     margin-left: 2rem;
-  }
-
-  .vs-input {
-    width: 450px;
   }
 
   .description,
@@ -34,7 +56,14 @@
     margin-top: 0;
   }
 
-  .signup-btn, .signin-btn {
+  .vs-con-input-label .con-text-validation {
+    font-size: 14px;
+    height: 24px;
+  }
+
+  .signup-btn,
+  .signin-btn,
+  .send-request-btn {
     max-width: 250px;
     cursor: pointer;
     width: 100%;
@@ -52,8 +81,74 @@
   .signin-btn {
     background-image: url("../images/signin-btn.png");
   }
+  .send-request-btn {
+    background-image: url("../images/send-request-btn.png");
+    margin: 0 auto;
+  }
 
   .user-registration-background {
     width: 100%;
+  }
+
+  .con-input-upload {
+    max-width: 200px;
+    border: 1px solid $success-color;
+    background: #fff;
+    border-radius: 6px;
+    .text-input {
+      font-size: 16px;
+      color: $success-color;
+      line-height: 28px;
+    }
+    .material-icons.notranslate {
+      display: none;
+    }
+    input {
+      max-width: 200px;
+    }
+  }
+  .con-img-upload {
+    margin-left: -5px;
+  }
+  .upload-file-label {
+    margin: 0;
+    line-height: 40px;
+  }
+
+  .dropzone {
+    text-align: center;
+    border-radius: 6px;
+    border: 1px dashed #808080;
+    .description {
+      font-size: 16px;
+      font-style: normal;
+      margin-left: 0;
+    }
+    .inner-upload-btn {
+      display: block;
+      margin: 0 auto;
+      background: #4ed2f9;
+      background: rgba(78, 210, 249, 1);
+      width: 195px;
+      height: 40px;
+      border-radius: 6px;
+      color: #fff;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  .dropzone-wrapper {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .dropzone .dz-preview {
+    margin: 0;
+  }
+  .dz-image-preview {
+    width: 200px;
   }
 }

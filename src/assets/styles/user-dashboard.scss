@@ -3,5 +3,53 @@
     min-height: 100%;
     background: #fff;
     margin-left: 260px;
+
+    .search-box {
+      width: 60%;
+      margin: 30px auto 25px;
+    }
+
+    .material-icons {
+      color: #F15A24;
+    }
+    .list-organization {
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+
+      .v-list {
+        height: calc(90vh - 135px);
+        overflow: auto;
+      }
+      .v-subheader {
+        height: 0
+      }
+      .v-card {
+        //margin-bottom: 5vh;
+      }
+      .v-toolbar {
+        box-shadow: none;
+      }
+
+      .v-divider--inset:not(.v-divider--vertical) {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px);
+      }
+
+      .v-toolbar__content {
+        text-align: center;
+
+      }
+
+      .v-toolbar__title {
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 }

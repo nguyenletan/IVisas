@@ -1,10 +1,10 @@
 <template>
   <div class="container container-border" id="register-success">
-    <h1>Thank you!</h1>
+    <h1><i class="material-icons">check_circle</i>SENT</h1>
     <div class="row">
       <div class="offset-2 col-8">
         <p class="description">
-          Your registration process is complete.<br/>
+          Your proof is submitted.<br/>
           Topping chocolate bar oat cake wafer cotton candy. Chocolate cake chocolate bar chocolate cake sugar plum
           candy pie. Lemon drops jelly beans halvah marzipan donut donut. Cheesecake liquorice danish donut chocolate
           cake.

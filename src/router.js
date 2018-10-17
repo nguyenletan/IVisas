@@ -1,15 +1,17 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import RegisterSuccess from "./views/RegisterSuccess";
-import UserRegistration from "./views/UserRegistration";
-import Login from "./views/Login";
 import ConnectedUser from "./views/ConnectedUser";
+import FillInformationForGovernment from "./views/FillInformationForGovernment";
+import Home from "./views/Home.vue";
+import Login from "./views/Login";
+import RegisterSuccess from "./views/RegisterSuccess";
 import UserConnecting from "./views/UserConnecting";
-import UserRequestGovernment from "./views/UserRequestGovernment";
-import UserRequestCompany from "./views/UserRequestCompany";
-import UserRequestUniversity from "./views/UserRequestUniversity";
 import UserDashboard from "./views/UserDashboard";
+import UserRegistration from "./views/UserRegistration";
+import UserRequestCompany from "./views/UserRequestCompany";
+import UserRequestGovernment from "./views/UserRequestGovernment";
+import UserRequestUniversity from "./views/UserRequestUniversity";
+import UserSendRequestSuccessfully from "./views/UserSendRequestSuccessfully";
 
 Vue.use(Router);
 
@@ -48,6 +50,11 @@ export default new Router({
       component: ConnectedUser
     },
     {
+      path: "/user-send-request-successfully",
+      name: "UserSendRequestSuccessfully",
+      component: UserSendRequestSuccessfully
+    },
+    {
       path: "/user-connecting",
       name: "UserConnecting",
       component: UserConnecting
@@ -66,6 +73,11 @@ export default new Router({
       path: "/user-request-university",
       name: "UserRequestUniversity",
       component: UserRequestUniversity
+    },
+    {
+      path: "/fill-information-for-government",
+      name: FillInformationForGovernment,
+      component: FillInformationForGovernment
     },
     {
       path: "/about",

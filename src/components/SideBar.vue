@@ -11,7 +11,7 @@
         <vs-divider class="sidebar-divider" color="#1256B3"></vs-divider>
       </div>
 
-      <vs-sidebar-item index="1" icon="notifications">
+      <vs-sidebar-item index="9" icon="notifications">
         NOTIFICATIONS
       </vs-sidebar-item>
 
