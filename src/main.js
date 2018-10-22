@@ -14,6 +14,8 @@ import "material-icons/iconfont/material-icons.css";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 
+console.log(process.env.VUE_APP_HYPERLEDGER_API);
+
 Vue.config.productionTip = false;
 Vue.use(Vuesax);
 Vue.use(VeeValidate);

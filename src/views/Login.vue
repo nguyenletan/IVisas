@@ -6,7 +6,7 @@
     </div>
     <div class="container container-border">
       <img class="logo" src="@/assets/images/logo-without-shadow.png"/>
-      <form class="" @submit.prevent="validateBeforeSubmit">
+      <form class="" @submit.prevent="validateBeforeSubmit" @submit="submit">
         <div class="row">
           <div class="centerx labelx col-8">
             <vs-input name="wallet-name" v-validate="'required'" vs-label="Wallet Name" vs-placeholder="Wallet Name"
@@ -23,13 +23,10 @@
           <div class="col-3 text-left">
             <vs-checkbox vs-color="#006AFB" v-model="isRememberMe">Remember me?</vs-checkbox>
           </div>
-          <div class="col-4 text-right">
-            <p class="forgot-wallet-key"><a href="#">Forgot your Wallet Key?</a></p>
-          </div>
         </div>
         <div class="row mt-4">
           <div class="offset-4 col-3">
-            <input type="submit" class="signin-btn"/>
+            <vs-button class="big-btn">Sign In</vs-button>
           </div>
         </div>
       </form>
@@ -46,17 +43,65 @@ export default {
     return {
       walletName: null,
       walletKey: "",
-      isRememberMe: false
+      isRememberMe: false,
+      isValid: false
     };
   },
+  created: function() {
+    this.api_url = process.env.VUE_APP_HYPERLEDGER_API;
+  },
+
   methods: {
     validateBeforeSubmit() {
       this.$validator.validateAll().then(result => {
-        if (result) {
-          // isValid == true
+        this.isValid = !!result;
+        if (this.isValid === true) {
+          this.submit();
           return;
         }
       });
+    },
+    login() {
+      let api_url = process.env.VUE_APP_HYPERLEDGER_API + "";
+      fetch(api_url, {
+        method: "POST"
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+        });
+    },
+    submit() {
+      //this.$validator.validateAll();
+      if (this.isValid === true) {
+        this.$vs.loading({ type: "corners" });
+        let api_url = process.env.VUE_APP_HYPERLEDGER_API + "login";
+        fetch(api_url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name: this.walletName, key: this.walletKey })
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data.code === 200) {
+              /// TODO: goto Register Success
+              this.$router.push("user-dashboard");
+            }
+            this.$vs.loading.close();
+          })
+          .catch(err => {
+            this.$vs.notify({
+              title: "Error",
+              text: "Lorem ipsum dolor sit amet, consectetur",
+              color: "warning"
+            });
+            console.log(err);
+            this.$vs.loading.close();
+          });
+      }
     }
   }
 };

@@ -13,7 +13,7 @@
     </div>
     <div class="row mt-4 mb-4 text-center">
       <div class="col">
-        <img src="@/assets/images/next-btn.png" alt="next button" class="next-btn"/>
+        <vs-button class="big-btn" @click="$router.push('user-dashboard')">Next</vs-button>
       </div>
     </div>
   </div>

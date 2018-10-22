@@ -35,7 +35,7 @@
   }
 
   .description {
-    margin-left: 2rem;
+    /*margin-left: 2rem;*/
     margin-top: 10px;
     font-size: 16px;
     font-style: italic;
@@ -74,6 +74,7 @@
     text-indent: -9999px;
     height: 66px;
     background-color: transparent;
+    margin-bottom: 30px;
   }
   .signup-btn {
     background-image: url("../images/signup-btn.png");
@@ -152,3 +153,4 @@
     width: 200px;
   }
 }
+
