@@ -16,7 +16,8 @@ import {
   VDivider,
   transitions,
   VDialog,
-  VDatePicker
+  VDatePicker,
+  VCarousel
 } from "vuetify";
 import "vuetify/src/stylus/app.styl";
 
@@ -37,7 +38,8 @@ Vue.use(Vuetify, {
     VDivider,
     VTextField,
     VDialog,
-    VDatePicker
+    VDatePicker,
+    VCarousel
   },
   theme: {
     primary: "#ee44aa",

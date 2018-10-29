@@ -12,6 +12,7 @@ import UserRequestCompany from "./views/UserRequestCompany";
 import UserRequestGovernment from "./views/UserRequestGovernment";
 import UserRequestUniversity from "./views/UserRequestUniversity";
 import UserSendRequestSuccessfully from "./views/UserSendRequestSuccessfully";
+import PartnerChannel from "./views/PartnerChannel";
 
 Vue.use(Router);
 
@@ -76,8 +77,13 @@ export default new Router({
     },
     {
       path: "/fill-information-for-government",
-      name: FillInformationForGovernment,
+      name: "FillInformationForGovernment",
       component: FillInformationForGovernment
+    },
+    {
+      path: "/partner-channel",
+      name: "PartnerChannel",
+      component: PartnerChannel
     },
     {
       path: "/about",

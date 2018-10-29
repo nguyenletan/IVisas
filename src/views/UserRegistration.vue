@@ -64,7 +64,7 @@ export default {
     validateBeforeSubmit: function() {
       this.$validator.validateAll().then(result => {
         // console.log(result);
-        this.isValid = result ? true : false;
+        this.isValid = !!result;
         if (this.isValid === true) {
           this.submit();
           return;

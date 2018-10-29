@@ -1,7 +1,7 @@
 @import "_variables";
 
 body {
-  font-family: "Lato", Arial, sans-serif !important;
+  font-family: "Segoe UI", "Lato", Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $body-color !important;
@@ -100,11 +100,16 @@ a {
   color: #006AFB;
 }
 
-.clear-end {
-}
-
 .big-btn, .big-btn:hover {
-  box-shadow: 0px 5.75px 0px $active-color !important;;
+  box-shadow: 0px 5.8px 0px $active-color !important;
+  &.partner-btn {
+    box-shadow: 0px 5.8px 0px $active-partner-color !important;
+    background-color: $partner-color !important;
+  }
+  &.work-with-us-btn {
+    box-shadow: 0px 5.8px 0px #058B32 !important;
+    background-color: #F0C71C !important;
+  }
 }
 
 .big-btn {
@@ -115,5 +120,20 @@ a {
     text-transform: uppercase;
     padding: 3px 37px;
     font-weight: 900;
+  }
+}
+
+.very-big-btn{
+  border-radius: 8px;
+  margin-bottom: 30px;
+  .vs-button-text {
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 4px 37px;
+    font-weight: 900;
+  }
+  &.work-with-us-btn {
+    box-shadow: 0px 8px 0px #058B32 !important;
+    background-color: #F0C71C !important;
   }
 }
