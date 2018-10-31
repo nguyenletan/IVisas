@@ -15,15 +15,15 @@
       <form class="" @submit.prevent="validateBeforeSubmit">
         <div class="row">
           <div class="col-6">
-            <vs-input name="last-name" v-validate="'required'" vs-label="Last Name" vs-placeholder="Last Name"
-                      v-model="lastName" vs-danger-text="The last name is required"
-                      :vs-danger="errors.has('last-name')"/>
+            <vs-input name="last-name" v-validate="'required'" label="Last Name" placeholder="Last Name"
+                      v-model="lastName" danger-text="The last name is required"
+                      :danger="errors.has('last-name')"/>
 
           </div>
           <div class="offset-0 col-6">
-            <vs-input name="first-name" v-validate="'required'" vs-label="First Name" vs-placeholder="First Name"
-                      v-model="firstName" vs-danger-text="The wallet type is required"
-                      :vs-danger="errors.has('first-name')"/>
+            <vs-input name="first-name" v-validate="'required'" label="First Name" placeholder="First Name"
+                      v-model="firstName" danger-text="The wallet type is required"
+                      :danger="errors.has('first-name')"/>
           </div>
         </div>
         <div class="row">
@@ -37,10 +37,10 @@
                 full-width
                 width="290px"
             >
-              <vs-input slot="activator" name="date-of-birth" v-validate="'required'" vs-label="Date Of Birth"
-                        vs-placeholder="Date Of Birth"
-                        v-model="computedDateFormatted" vs-danger-text="The date of birth is required"
-                        :vs-danger="errors.has('date-of-birth')" vs-icon-after="true" vs-icon="calendar_today"/>
+              <vs-input slot="activator" name="date-of-birth" v-validate="'required'" label="Date Of Birth"
+                        placeholder="Date Of Birth"
+                        v-model="computedDateFormatted" danger-text="The date of birth is required"
+                        :danger="errors.has('date-of-birth')" icon-after="true" icon="calendar_today"/>
 
               <v-date-picker v-model="dateOfBirth" scrollable header-color="#0C63B7">
                 <v-spacer></v-spacer>
@@ -50,22 +50,22 @@
             </v-dialog>
           </div>
           <div class="col-8 offset-0">
-            <vs-input name="place-of-birth" v-validate="'required'" vs-label="Place of birth"
-                      vs-placeholder="Place Of Birth"
-                      v-model="placeOfBirth" vs-danger-text="The Place of Birth is required"
-                      :vs-danger="errors.has('place-of-birth')"/>
+            <vs-input name="place-of-birth" v-validate="'required'" label="Place of birth"
+                      placeholder="Place Of Birth"
+                      v-model="placeOfBirth" danger-text="The Place of Birth is required"
+                      :danger="errors.has('place-of-birth')"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <vs-input type="number" name="id-number" v-validate="'required'" vs-label="ID number" vs-placeholder="ID Number"
-                      v-model="idNumber" vs-danger-text="The Id Number is required"
-                      :vs-danger="errors.has('id-number')"/>
+            <vs-input type="number" name="id-number" v-validate="'required'" label="ID number" placeholder="ID Number"
+                      v-model="idNumber" danger-text="The Id Number is required"
+                      :danger="errors.has('id-number')"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <vs-input name="address" vs-label="Address" vs-placeholder="Address" v-model="address"/>
+            <vs-input name="address" label="Address" placeholder="Address" v-model="address"/>
           </div>
         </div>
         <div class="row">
@@ -79,10 +79,10 @@
                 full-width
                 width="290px"
             >
-              <vs-input slot="activator" name="issued-date" v-validate="'required'" vs-label="Issued Date"
-                        vs-placeholder="Issue Date"
-                        v-model="issuedDate" vs-danger-text="The issued date is required"
-                        :vs-danger="errors.has('issued-date')" vs-icon-after="true" vs-icon="calendar_today"/>
+              <vs-input slot="activator" name="issued-date" v-validate="'required'" label="Issued Date"
+                        placeholder="Issue Date"
+                        v-model="issuedDate" danger-text="The issued date is required"
+                        :danger="errors.has('issued-date')" icon-after="true" icon="calendar_today"/>
 
               <v-date-picker v-model="issuedDate" scrollable header-color="#0C63B7">
                 <v-spacer></v-spacer>
@@ -92,25 +92,25 @@
             </v-dialog>
           </div>
           <div class="col-4 offset-0">
-            <vs-input name="issued-by" v-validate="'required'" vs-label="Issued By"
-                      vs-placeholder="Issued By"
-                      v-model="issuedBy" vs-danger-text="The Issued By is required"
-                      :vs-danger="errors.has('issued-by')"/>
+            <vs-input name="issued-by" v-validate="'required'" label="Issued By"
+                      placeholder="Issued By"
+                      v-model="issuedBy" danger-text="The Issued By is required"
+                      :danger="errors.has('issued-by')"/>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-1">
             <label class="upload-file-label">File<span class="red--text">*</span></label>
           </div>
-          <div class="offset-0 col">
+         <!-- <div class="offset-0 col">
             <vs-upload :v-bind:single-upload="true" text="Choose a file..." action="https://jsonplaceholder.typicode.com/posts/" @on-success="successUpload" />
-          </div>
+          </div>-->
         </div>
-        <div class="row mt-4">
+       <!-- <div class="row mt-4">
           <div class="col-1">
             <label class="upload-file-label">Or</label>
           </div>
-        </div>
+        </div>-->
         <div class="row mt-5">
           <div class="col">
             <div class="dropzone-wrapper">

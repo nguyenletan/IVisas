@@ -13,7 +13,7 @@
     </div>
     <div class="row mt-4 mb-4 text-center">
       <div class="col">
-        <vs-button class="big-btn" @click="$router.push('user-dashboard')">Next</vs-button>
+        <vs-button class="big-btn light-btn" @click="$router.push('login')">Next</vs-button>
       </div>
     </div>
   </div>

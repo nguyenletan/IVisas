@@ -17,7 +17,7 @@
         <a href="#"><i class="material-icons">mail_outline</i><span>Contact</span></a>
       </vs-navbar-item>
       <vs-navbar-item index="3">
-        <vs-button vs-size="medium" class="partner-channel-btn" vs-type="border" color-text="#FFFFFF" color="#FFFFFF">Partner Channel</vs-button>
+        <router-link to="/partner-channel"><vs-button size="medium" class="partner-channel-btn" type="border" color-text="#FFFFFF" color="#FFFFFF">Partner Channel</vs-button></router-link>
       </vs-navbar-item>
     </vs-navbar>
 
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import "@/assets/styles/main-header.scss";
+import "../assets/styles/main-header.scss";
 export default {
   name: "main-header"
 };

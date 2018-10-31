@@ -1,34 +1,48 @@
 @import "_variables";
 
 #home {
-  min-height: 100vh;
-  background-color: $home_background;
+  height: 100vh;
+  min-height: 700px;
   color: $home_color;
   background: url("../images/home.png") $home_background right bottom;
-  background-size: 58% auto;
+  background-size: auto 70%;
   background-repeat: no-repeat;
+  padding-left: 15px;
 
   h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 900;
     color: $active-color;
     line-height: 1;
     img {
-      height: 60px;
+      height: 70px;
     }
   }
 
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .flower {
+    width: 60px;
+  }
+
   .sub-header {
-    font-size: 50px;
+    font-size: 39px;
     font-weight: 700;
     line-height: 1;
     vertical-align: top;
   }
 
   .header-description {
-    margin-top: 16px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 14px;
     font-style: italic;
+    // padding-right: 15px;
+  }
+
+  .feature {
+    margin-top: 20px;
   }
 
   .register-btn {
@@ -43,13 +57,104 @@
   .sign-in {
     color: $active-color;
   }
+  .already-account {
+    font-size: 14px;
+  }
 
 }
 
-
-@media (min-width: 1800px) {
+@media (min-width: 1280px) {
+  .logo {
+    margin-left: -20px;
+  }
   #home {
-    background-size: 58% auto;
-    padding-left: 3rem;
+    background-size: auto 80%;
+    padding-left: $layout-padding-left;
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      color: $active-color;
+      line-height: 1;
+      img {
+        height: 50px;
+      }
+
+    }
+
+    .sub-header {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1;
+      vertical-align: top;
+    }
+
+    .header-description {
+      margin-top: 16px;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .register-btn {
+      width: 65%;
+    }
+
+    .home-features {
+      width: 100%;
+    }
+
+    .sign-in {
+      color: $active-color;
+    }
+    .already-account {
+      font-size: 14px;
+    }
+
+  }
+}
+
+@media (min-width: 1360px) {
+  #home {
+    background-size: 63% auto;
+    padding-left: $layout-padding-left;
+
+    h1 {
+      font-size: 60px;
+      font-weight: 900;
+      color: $active-color;
+      line-height: 1;
+      img {
+        height: 60px;
+      }
+
+    }
+
+    .sub-header {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1;
+      vertical-align: top;
+    }
+
+    .header-description {
+      margin-top: 20px;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .feature {
+      margin-top: 20px;
+    }
+
+    .home-features {
+      width: 100%;
+    }
+
+    .sign-in {
+      color: $active-color;
+    }
+    .already-account {
+      font-size: 14px;
+    }
+
   }
 }

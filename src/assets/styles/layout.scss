@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $body-color !important;
   font-size: 18px !important;
-  background: #FFF;
+  background: #fff;
 }
 
 ::selection {
@@ -16,7 +16,7 @@ body {
 
 .logo {
   margin-top: 10px;
-  margin-left: 2rem;
+  margin-left: 10px;
   background: transparent;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease;
@@ -26,7 +26,7 @@ body {
 }
 
 .container.container-border {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -63,18 +63,26 @@ a {
   }
 }
 
-.vs-input-label {
+.vs-input--label {
   color: $label-color !important;
   margin-top: 20px;
   padding-left: 1px !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-style: italic;
+}
+
+.vs-input--placeholder {
+  top: 6px !important;
 }
 
 .vs-con-input-label > span {
   min-height: 20px;
   width: auto;
   display: block;
+}
+
+.input-icon-validate-danger .input-icon-validate {
+  line-height: 40px;
 }
 
 .vs-con-input-label .vs-con-input .vs-inputx {
@@ -87,7 +95,7 @@ a {
 
 .vs-con-input-label .vs-con-input .icon-inputx.icon-after {
   border-left: none !important;
-  right: 25px !important;
+  right: 30px !important;
   font-size: 23px;
 }
 
@@ -97,43 +105,58 @@ a {
 }
 
 .v-date-picker-table .v-btn.v-btn--active {
-  color: #006AFB;
+  color: #006afb;
 }
 
-.big-btn, .big-btn:hover {
+.big-btn,
+.big-btn:hover {
   box-shadow: 0px 5.8px 0px $active-color !important;
   &.partner-btn {
     box-shadow: 0px 5.8px 0px $active-partner-color !important;
     background-color: $partner-color !important;
   }
   &.work-with-us-btn {
-    box-shadow: 0px 5.8px 0px #058B32 !important;
-    background-color: #F0C71C !important;
+    box-shadow: 0px 5.8px 0px #058b32 !important;
+    background-color: #f0c71c !important;
   }
 }
 
 .big-btn {
   border-radius: 5px;
   margin-bottom: 30px;
+  background-color: $button-background !important;
   .vs-button-text {
     font-size: 20px;
     text-transform: uppercase;
     padding: 3px 37px;
     font-weight: 900;
   }
+  &.light-btn {
+    background-color: $success-color !important;
+  }
 }
 
-.very-big-btn{
+.vs-button-primary.vs-button-filled {
+  background-color: $button-background;
+}
+
+.very-big-btn {
   border-radius: 8px;
-  margin-bottom: 30px;
-  .vs-button-text {
+  margin-bottom: 20px;
+  background-color: $button-background !important;
+  box-shadow: 0px 6px 0px $active-color !important;
+  .vs-button--text {
     font-size: 26px;
     text-transform: uppercase;
-    padding: 4px 37px;
     font-weight: 900;
   }
+  &.register-btn {
+    .vs-button--text {
+      font-size: 30px;
+    }
+  }
   &.work-with-us-btn {
-    box-shadow: 0px 8px 0px #058B32 !important;
-    background-color: #F0C71C !important;
+    box-shadow: 0px 8px 0px #058b32 !important;
+    background-color: #f0c71c !important;
   }
 }

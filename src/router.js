@@ -13,6 +13,7 @@ import UserRequestGovernment from "./views/UserRequestGovernment";
 import UserRequestUniversity from "./views/UserRequestUniversity";
 import UserSendRequestSuccessfully from "./views/UserSendRequestSuccessfully";
 import PartnerChannel from "./views/PartnerChannel";
+import TranscriptRequestForm from "./views/TranscriptRequestForm";
 
 Vue.use(Router);
 
@@ -84,6 +85,11 @@ export default new Router({
       path: "/partner-channel",
       name: "PartnerChannel",
       component: PartnerChannel
+    },
+    {
+      path: "/transcript-request-form",
+      name: "TranscriptRequestForm",
+      component: TranscriptRequestForm
     },
     {
       path: "/about",

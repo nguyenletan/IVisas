@@ -2,13 +2,13 @@
 
 .vs-navbar {
   color: $home_color;
-  .vs-navbar-item {
+  .vs-navbar--item {
     margin-right: 50px;
     a {
       font-size: 16px !important;
       color: $home_color !important;
       font-weight: 400;
-      line-height: 70px;
+      line-height: 1;
       span {
         display: inline-block;
         line-height: 1;
@@ -20,6 +20,9 @@
       span,
       i {
         vertical-align: middle;
+      }
+      .vs-button--text {
+        vertical-align: baseline;
       }
     }
     .partner-channel-btn {

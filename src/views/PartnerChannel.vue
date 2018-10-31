@@ -4,7 +4,7 @@
 
       <div id="nav" class="row justify-content-between">
         <div class="col">
-          <a href="javascript:void(0);"><i class="material-icons">arrow_back</i><span>iVisas Homepage</span></a>
+          <router-link to="/"><i class="material-icons">arrow_back</i><span>iVisas Homepage</span></router-link>
         </div>
         <div class="col text-right">
           <a href="javascript:void(0);"><i class="material-icons">phone</i><span>Need help?</span></a>

@@ -8,10 +8,10 @@
       <img class="university-logo" src="@/assets/images/university-abc.png" alt="university abc"/>
       <h1>Choose your request</h1>
       <ul class="request-options">
-        <li><vs-radio name="requestOption" v-model="requestOption" vs-value="1">Request transcript.</vs-radio></li>
-        <li><vs-radio name="requestOption" v-model="requestOption" vs-value="2">Request certificate.</vs-radio></li>
-        <li><vs-radio name="requestOption" v-model="requestOption" vs-value="2">Create job certificate credential request.</vs-radio></li>
-        <li><vs-radio class="other-option" name="requestOption" v-model="requestOption" vs-value="0">Other:</vs-radio>
+        <li><vs-radio name="requestOption" v-model="requestOption" value="1">Request transcript.</vs-radio></li>
+        <li><vs-radio name="requestOption" v-model="requestOption" value="2">Request certificate.</vs-radio></li>
+        <li><vs-radio name="requestOption" v-model="requestOption" value="2">Create job certificate credential request.</vs-radio></li>
+        <li><vs-radio class="other-option" name="requestOption" v-model="requestOption" value="0">Other:</vs-radio>
           <vs-textarea v-model="otherOption"></vs-textarea>
         </li>
       </ul>

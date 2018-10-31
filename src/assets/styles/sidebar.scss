@@ -11,7 +11,7 @@
   box-sizing: border-box;
   overflow-y: auto;
 
-  .vs-sidebar-background {
+  .vs-sidebar--background {
     display: none;
   }
 
@@ -35,23 +35,23 @@
     margin-bottom: 20px;
   }
 
-  .vs-sidebar .vs-sidebar-items {
+  .vs-sidebar .vs-sidebar--items {
     margin-top: 20px;
     color: $sidebar-text-color;
   }
-  .vs-sidebar .vs-sidebar-items .vs-sidebar-item a {
+  .vs-sidebar .vs-sidebar--items .vs-sidebar--item a {
     padding-left: 15%;
     padding-right: 15%;
     font-size: 12px;
     font-weight: 400;
   }
 
-  .vs-sidebar .vs-sidebar-items .vs-sidebar-item a:hover {
+  .vs-sidebar .vs-sidebar--items .vs-sidebar--item a:hover {
     font-weight: 700;
     color: $sidebar-text-color !important;
   }
 
-  .vs-sidebar .vs-sidebar-items .vs-sidebar-item-active a {
+  .vs-sidebar .vs-sidebar--items .vs-sidebar--item-active a {
     font-weight: 700;
     color: $sidebar-text-color !important;
   }

@@ -8,9 +8,9 @@
       <img class="ddr-img" src="@/assets/images/ddr.png" alt="DDR"/>
       <h1>Choose your request</h1>
       <ul class="request-options">
-        <li><vs-radio name="requestOption" v-model="requestOption" vs-value="1">Request digital national ID.</vs-radio></li>
-        <li><vs-radio name="requestOption" v-model="requestOption" vs-value="2">Request digital birth certificate.</vs-radio></li>
-        <li><vs-radio class="other-option" name="requestOption" v-model="requestOption" vs-value="0">Other:</vs-radio>
+        <li><vs-radio name="requestOption" v-model="requestOption" value="1">Request digital national ID.</vs-radio></li>
+        <li><vs-radio name="requestOption" v-model="requestOption" value="2">Request digital birth certificate.</vs-radio></li>
+        <li><vs-radio class="other-option" name="requestOption" v-model="requestOption" value="0">Other:</vs-radio>
         <vs-textarea v-model="otherOption"></vs-textarea>
         </li>
       </ul>

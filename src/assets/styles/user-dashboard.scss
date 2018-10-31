@@ -10,8 +10,9 @@
     }
 
     .material-icons {
-      color: #F15A24;
+      color: #f15a24;
     }
+
     .list-organization {
       width: 85%;
       margin: 0 auto;
@@ -19,14 +20,15 @@
       justify-content: space-around;
 
       .v-list {
-        height: calc(90vh - 135px);
+        height: calc(92vh - 135px);
         overflow: auto;
       }
       .v-subheader {
-        height: 0
+        height: 0;
       }
       .v-card {
         //margin-bottom: 5vh;
+        min-width: 31%
       }
       .v-toolbar {
         box-shadow: none;
@@ -40,7 +42,6 @@
 
       .v-toolbar__content {
         text-align: center;
-
       }
 
       .v-toolbar__title {

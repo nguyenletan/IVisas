@@ -1,6 +1,7 @@
 import "@babel/polyfill";
 import Vue from "vue";
 import "./plugins/vuetify";
+import helpers from "./plugins/helpers";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -19,6 +20,7 @@ console.log(process.env.VUE_APP_HYPERLEDGER_API);
 Vue.config.productionTip = false;
 Vue.use(Vuesax);
 Vue.use(VeeValidate);
+Vue.use(helpers);
 new Vue({
   router,
   store,
