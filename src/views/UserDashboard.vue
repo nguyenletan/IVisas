@@ -26,7 +26,7 @@
 
                 </v-list-tile-content>
               </v-list-tile>
-              <v-divider :key="item.index"></v-divider>
+              <v-divider :key="index"></v-divider>
             </template>
           </v-list>
         </v-card>
@@ -49,7 +49,7 @@
 
                 </v-list-tile-content>
               </v-list-tile>
-              <v-divider :key="item.index"></v-divider>
+              <v-divider :key="index"></v-divider>
             </template>
           </v-list>
         </v-card>
@@ -73,7 +73,7 @@
 
                 </v-list-tile-content>
               </v-list-tile>
-              <v-divider :key="item.index"></v-divider>
+              <v-divider :key="index"></v-divider>
             </template>
           </v-list>
         </v-card>
