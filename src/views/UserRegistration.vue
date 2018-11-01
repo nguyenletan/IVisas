@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import "@/assets/styles/user-registration-or-login.scss";
+import "@/assets/styles/forms.scss";
 
 export default {
   name: "UserRegistration",

@@ -1,4 +1,4 @@
-#user-dashboard {
+#user-dashboard, #my-wallet {
   .dashboard-content {
     min-height: 100%;
     background: #fff;
@@ -11,6 +11,12 @@
 
     .material-icons {
       color: #f15a24;
+    }
+
+    .main-divider-title {
+      margin-left: 7.7%;
+      font-size: 16px;
+      color: #000;
     }
 
     .list-organization {

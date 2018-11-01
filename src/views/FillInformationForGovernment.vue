@@ -137,7 +137,7 @@
 </template>
 
 <script>
-import "@/assets/styles/user-registration-or-login.scss";
+import "@/assets/styles/forms.scss";
 import vue2Dropzone from "vue2-dropzone";
 import "vue2-dropzone/dist/vue2Dropzone.min.css";
 export default {

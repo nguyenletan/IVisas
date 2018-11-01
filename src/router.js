@@ -7,6 +7,7 @@ import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
 import UserConnecting from "./views/UserConnecting";
 import UserDashboard from "./views/UserDashboard";
+import MyWallet from "./views/MyWallet";
 import UserRegistration from "./views/UserRegistration";
 import UserRequestCompany from "./views/UserRequestCompany";
 import UserRequestGovernment from "./views/UserRequestGovernment";
@@ -30,6 +31,11 @@ export default new Router({
       path: "/user-dashboard",
       name: "UserDashboard",
       component: UserDashboard
+    },
+    {
+      path: "/my-wallet",
+      name: "MyWallet",
+      component: MyWallet
     },
     {
       path: "/login",

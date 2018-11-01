@@ -1,11 +1,13 @@
 <template>
-  <div id="user-dashboard">
+  <div id="my-wallet">
     <side-bar></side-bar>
     <div class="dashboard-content">
       <div class="search-box">
         <v-text-field v-model="searchValue" label="Search" append-icon="search"></v-text-field>
       </div>
 
+      <h2 class="main-divider-title">My Wallet</h2>
+      <vs-divider class="main-divider"></vs-divider>
       <div class="list-organization">
 
         <v-card>
@@ -89,7 +91,7 @@ import "@/assets/styles/user-dashboard.scss";
 import SideBar from "../components/SideBar";
 
 export default {
-  name: "UserDashboard",
+  name: "MyWallet",
   data: function() {
     return {
       searchValue: "",
