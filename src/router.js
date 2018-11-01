@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import ConnectedUser from "./views/ConnectedUser";
 import FillInformationForGovernment from "./views/FillInformationForGovernment";
+import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
 import Home from "./views/Home.vue";
 import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
@@ -36,6 +37,11 @@ export default new Router({
       path: "/my-wallet",
       name: "MyWallet",
       component: MyWallet
+    },
+    {
+      path: "/digital-national-id-doc",
+      name: "DigitalNationalIdDoc",
+      component: DigitalNationalIdDoc
     },
     {
       path: "/login",
