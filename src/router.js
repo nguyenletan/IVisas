@@ -16,6 +16,8 @@ import UserRequestUniversity from "./views/UserRequestUniversity";
 import UserSendRequestSuccessfully from "./views/UserSendRequestSuccessfully";
 import PartnerChannel from "./views/PartnerChannel";
 import TranscriptRequestForm from "./views/TranscriptRequestForm";
+import JobApplicationForm from "./views/JobApplicationForm";
+import VerifyJobApplicationForm from "./views/VerifyJobApplicationForm";
 
 Vue.use(Router);
 
@@ -42,6 +44,16 @@ export default new Router({
       path: "/digital-national-id-doc",
       name: "DigitalNationalIdDoc",
       component: DigitalNationalIdDoc
+    },
+    {
+      path: "/job-application-form",
+      name: "JobApplicationForm",
+      component: JobApplicationForm
+    },
+    {
+      path: "/verify-job-application-form",
+      name: "VerifyJobApplicationForm",
+      component: VerifyJobApplicationForm
     },
     {
       path: "/login",

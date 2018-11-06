@@ -83,7 +83,8 @@ a {
   top: 6px !important;
 }
 
-.vs-con-input-label > span {
+.vs-con-input-label > span,
+.con-select > span {
   min-height: 20px;
   width: auto;
   display: block;
@@ -96,9 +97,44 @@ a {
 .vs-con-input-label .vs-con-input .vs-inputx {
   border-radius: 3px !important;
   border-color: $border-color;
-  background-size: 1px 10px;
   background: white url("../images/input-background.png") repeat-x;
   background-size: 1px 10px;
+  color: #131313;
+}
+
+.light-input {
+  &.vs-con-input-label {
+    width: 100%;
+    .vs-con-input .vs-inputx {
+      border-radius: 3px !important;
+      border-color: #c9c9c9 !important;
+      background-size: 1px 10px;
+      background: white;
+    }
+  }
+
+  &.con-select {
+    width: 100%;
+    .vs-select--input {
+      border-radius: 3px !important;
+      border-color: #c9c9c9 !important;
+      background-size: 1px 10px;
+      background: white;
+      font-size: 18px;
+      padding: 1rem;
+    }
+  }
+
+  &.vs-input-primary.isFocus .vs-input--label,
+  &.vs-input-primary .vs-input--input:focus ~ .icon-inputx {
+    color: #131313;
+  }
+
+  .vs-input--input.hasValue + .vs-placeholder-label,
+  .vs-input--input:focus + .vs-placeholder-label,
+  .vs-input--placeholder {
+    font-size: 1rem;
+  }
 }
 
 .vs-con-input-label .vs-con-input .icon-inputx.icon-after {
@@ -110,6 +146,10 @@ a {
 .vs-component.con-vs-checkbox {
   justify-content: left;
   margin-left: 0;
+}
+
+.vs-select--input {
+  color: #131313 !important;
 }
 
 .v-date-picker-table .v-btn.v-btn--active {
