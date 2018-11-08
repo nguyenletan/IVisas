@@ -1,6 +1,6 @@
 @import "variables";
 
-#job-applications-form {
+#job-applications-form, #transcript-request-form {
 
   h1 {
     font-weight: 700;
@@ -8,8 +8,8 @@
     font-size: 36px;
     text-transform: capitalize;
     color: #000;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-top: 40px;
   }
 
   .description {
@@ -42,11 +42,15 @@
     }
 
     .vs-con-input-label .vs-con-input .icon-inputx.icon-after {
-      color: $partner-color;
-      font-weight: bold;
-      font-size: 28px;
-      line-height: 35px;
-      right: 10px!important;
+       color: $partner-color;
+       font-weight: bold;
+       font-size: 28px;
+       line-height: 35px;
+       right: 10px!important;
+     }
+
+    .vs-con-input-label.fail .vs-con-input .icon-inputx.icon-after {
+      color: $red-color;
     }
 
 
@@ -56,6 +60,12 @@
     margin-top: 30px;
   }
 
+}
+
+#transcript-request-form {
+  .description {
+    margin-bottom: 60px;
+  }
 }
 
 

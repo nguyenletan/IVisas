@@ -1,6 +1,10 @@
 <template>
   <div class="text-center" id="connected-user">
-    <img class="embed-responsive" src="@/assets/images/connected.png" alt="connected image"/>
+    <img
+      class="embed-responsive"
+      src="@/assets/images/connected.png"
+      alt="connected image"
+    />
     <h1>Connected!</h1>
   </div>
 </template>

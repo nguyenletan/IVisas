@@ -18,6 +18,7 @@ import PartnerChannel from "./views/PartnerChannel";
 import TranscriptRequestForm from "./views/TranscriptRequestForm";
 import JobApplicationForm from "./views/JobApplicationForm";
 import VerifyJobApplicationForm from "./views/VerifyJobApplicationForm";
+import VerifyTranscriptRequestForm from "./views/VerifyTranscriptRequestForm";
 
 Vue.use(Router);
 
@@ -114,6 +115,11 @@ export default new Router({
       path: "/transcript-request-form",
       name: "TranscriptRequestForm",
       component: TranscriptRequestForm
+    },
+    {
+      path: "/verify-transcript-request-form",
+      name: "VerifyTranscriptRequestForm",
+      component: VerifyTranscriptRequestForm
     },
     {
       path: "/about",

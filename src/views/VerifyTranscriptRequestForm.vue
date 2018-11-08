@@ -1,5 +1,5 @@
 <template>
-  <div id="transcript-request-form">
+  <div id="transcript-request-form" class="verify">
     <div class="back-link container">
       <a @click="$router.go(-1);" href="javascript:void(0);">Back</a>
     </div>
@@ -16,14 +16,14 @@
           <div class="col-8 m-auto">
             <vs-input
               name="first-name"
-              v-validate="'required'"
               placeholder="First Name"
               data-vv-name="first-name"
               v-model="fistName"
               size="large"
               class="light-input"
-              danger-text="The First Name is required"
-              :danger="errors.has('first-name')"
+              readonly="true"
+              icon-after="true"
+              icon="check"
             />
           </div>
         </div>
@@ -31,14 +31,14 @@
           <div class="col-8 m-auto">
             <vs-input
               name="last-name"
-              v-validate="'required'"
               placeholder="Last Name"
               data-vv-name="last-name"
               v-model="lastName"
               size="large"
               class="light-input"
-              danger-text="The Last Name is required"
-              :danger="errors.has('last-name')"
+              readonly="true"
+              icon-after="true"
+              icon="check"
             />
           </div>
         </div>
@@ -46,15 +46,15 @@
         <div class="row justify-content-center">
           <div class="col-8 m-auto">
             <vs-input
-                name="date-of-birth"
-                v-validate="'required'"
-                placeholder="Date of Birth"
-                data-vv-name="date-of-birth"
-                v-model="dateOfBirth"
-                size="large"
-                class="light-input"
-                danger-text="The Date of Birth is required"
-                :danger="errors.has('date-of-birth')"
+              name="date-of-birth"
+              placeholder="Date of Birth"
+              data-vv-name="date-of-birth"
+              v-model="dateOfBirth"
+              size="large"
+              class="light-input"
+              readonly="true"
+              icon-after="true"
+              icon="check"
             />
           </div>
         </div>
@@ -63,14 +63,15 @@
           <div class="col-8 m-auto">
             <vs-input
               name="place-of-birth"
-              v-validate="'required'"
               placeholder="Place of Birth"
               data-vv-name="place-of-birth"
               v-model="placeOfBirth"
               size="large"
-              class="light-input"
-              danger-text="The Place of Birth is required"
-              :danger="errors.has('place-of-birth')"
+              class="light-input fail"
+              readonly="true"
+              icon-after="true"
+              :danger="true"
+              icon="cancel"
             />
           </div>
         </div>
@@ -79,23 +80,23 @@
           <div class="col-8 m-auto">
             <vs-input
               name="national-id"
-              v-validate="'required'"
               placeholder="National ID Number"
               data-vv-name="national-id"
               v-model="nationalId"
               size="large"
               class="light-input"
-              danger-text="The National ID Number is required"
-              :danger="errors.has('national-id')"
+              readonly="true"
+              icon-after="true"
+              icon="check"
             />
           </div>
         </div>
 
         <div class="row">
           <div class="col-auto m-auto">
-            <vs-button type="submit" class="big-btn light-btn">
-              CHECK CREDENTIALS
-            </vs-button>
+            <vs-button type="submit" class="big-btn light-btn"
+              >CHECK CREDENTIALS</vs-button
+            >
           </div>
         </div>
       </form>
@@ -107,15 +108,15 @@
 import "@/assets/styles/form-request.scss";
 
 export default {
-  name: "TranscriptRequestFormTranscriptRequestForm",
+  name: "VerifyTranscriptRequestForm",
   data: function() {
     return {
-      fistName: null,
-      lastName: null,
-      nationalId: null,
-      placeOfBirth: null,
-      dateOfBirth: null,
-      graduationStatus: null
+      fistName: "Joe",
+      lastName: "Doe",
+      nationalId: "1321 231 13123",
+      placeOfBirth: "El Centrano Ca",
+      dateOfBirth: "01/12/1982",
+      graduationStatus: "Graduated"
     };
   },
   methods: {
