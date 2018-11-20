@@ -12,8 +12,10 @@
 
       <section class="main-title">
         <h2 class="main-divider-title">
-          MY WALLET > Education Institutions >
-          <strong class="black--text">ABC University</strong>
+          MY WALLET > Government Agencies >
+          <strong class="black--text"
+            >Department of Residence Registration</strong
+          >
         </h2>
         <span class="main-divider-icon">
           <i class="material-icons">star_border</i>
