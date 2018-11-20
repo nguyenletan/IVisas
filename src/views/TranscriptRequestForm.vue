@@ -46,15 +46,15 @@
         <div class="row justify-content-center">
           <div class="col-8 m-auto">
             <vs-input
-                name="date-of-birth"
-                v-validate="'required'"
-                placeholder="Date of Birth"
-                data-vv-name="date-of-birth"
-                v-model="dateOfBirth"
-                size="large"
-                class="light-input"
-                danger-text="The Date of Birth is required"
-                :danger="errors.has('date-of-birth')"
+              name="date-of-birth"
+              v-validate="'required'"
+              placeholder="Date of Birth"
+              data-vv-name="date-of-birth"
+              v-model="dateOfBirth"
+              size="large"
+              class="light-input"
+              danger-text="The Date of Birth is required"
+              :danger="errors.has('date-of-birth')"
             />
           </div>
         </div>

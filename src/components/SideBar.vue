@@ -25,14 +25,16 @@
         MY WALLET
       </vs-sidebar-item>
 
-      <vs-sidebar-item index="4" icon="settings">
+      <vs-sidebar-item index="4" icon="archive"> ARCHIVE </vs-sidebar-item>
+
+      <vs-sidebar-item index="5" icon="settings">
         ACCOUNT SETTINGS
       </vs-sidebar-item>
 
-      <vs-sidebar-item index="5" icon="view_headline">
+      <vs-sidebar-item index="6" icon="view_headline">
         TERMS AND CONDITIONS
       </vs-sidebar-item>
-      <vs-sidebar-item index="6" icon="exit_to_app"> SIGN OUT </vs-sidebar-item>
+      <vs-sidebar-item index="7" icon="exit_to_app"> SIGN OUT </vs-sidebar-item>
 
       <!--
         <div class="footer-sidebar" slot="footer">

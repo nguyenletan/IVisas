@@ -1,27 +1,42 @@
 <template>
-
   <div id="user-registration-or-login">
     <div class="back-link container">
-      <a @click="$router.go(-1)" href="javascript:void(0);">Back</a>
+      <a @click="$router.go(-1);" href="javascript:void(0);">Back</a>
     </div>
     <div class="container container-border">
-      <img class="logo" src="@/assets/images/logo-without-shadow.png"/>
+      <img class="logo" src="@/assets/images/logo-without-shadow.png" />
       <form class="" @submit="submit">
         <div class="row">
           <div class="centerx labelx col-8">
-            <vs-input name="wallet-name" v-validate="'required'" label="Wallet Name" placeholder="Wallet Name"
-                      v-model="walletName" danger-text="The wallet name is required"
-                      :danger="errors.has('wallet-name')"/>
-            <vs-input type="password" label="Wallet Key Confirm" placeholder="Wallet Key" v-model="walletKey"/>
+            <vs-input
+              name="wallet-name"
+              v-validate="'required'"
+              label="Wallet Name"
+              placeholder="Wallet Name"
+              v-model="walletName"
+              danger-text="The wallet name is required"
+              :danger="errors.has('wallet-name')"
+            />
+            <vs-input
+              type="password"
+              label="Wallet Key Confirm"
+              placeholder="Wallet Key"
+              v-model="walletKey"
+            />
           </div>
 
           <div class="col-3 text-right">
-            <img class="user-registration-background" src="@/assets/images/user-registration-background.png"/>
+            <img
+              class="user-registration-background"
+              src="@/assets/images/user-registration-background.png"
+            />
           </div>
         </div>
         <div class="row">
           <div class="col-3 text-left">
-            <vs-checkbox color="#006AFB" v-model="isRememberMe">Remember me?</vs-checkbox>
+            <vs-checkbox color="#006AFB" v-model="isRememberMe"
+              >Remember me?</vs-checkbox
+            >
           </div>
         </div>
         <div class="row mt-4">
@@ -85,5 +100,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

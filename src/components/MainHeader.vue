@@ -1,26 +1,38 @@
 <template>
   <div>
     <vs-navbar type="fund">
-      <!--<vs-button vs-type="flat" vs-radius="50%" vs-icon="menu"></vs-button>
-  -->
-
-      <vs-navbar-title><img class="logo" src="@/assets/images/logo.png"></vs-navbar-title>
+      <vs-navbar-title
+        ><img class="logo" src="@/assets/images/logo.png"
+      /></vs-navbar-title>
       <vs-spacer></vs-spacer>
-
       <vs-navbar-item index="0">
-        <router-link to="/"><i class="material-icons">home</i><span>Home</span></router-link>
+        <router-link to="/"
+          ><i class="material-icons">home</i><span>Home</span></router-link
+        >
       </vs-navbar-item>
       <vs-navbar-item index="1">
-        <a href="#"><i class="material-icons">person_outline</i><span>About Us</span></a>
+        <a href="#"
+          ><i class="material-icons">person_outline</i><span>About Us</span></a
+        >
       </vs-navbar-item>
       <vs-navbar-item index="2">
-        <a href="#"><i class="material-icons">mail_outline</i><span>Contact</span></a>
+        <a href="#"
+          ><i class="material-icons">mail_outline</i><span>Contact</span></a
+        >
       </vs-navbar-item>
       <vs-navbar-item index="3">
-        <router-link to="/partner-channel"><vs-button size="medium" class="partner-channel-btn" type="border" color-text="#FFFFFF" color="#FFFFFF">Partner Channel</vs-button></router-link>
+        <router-link to="/partner-channel"
+          ><vs-button
+            size="medium"
+            class="partner-channel-btn"
+            type="border"
+            color-text="#FFFFFF"
+            color="#FFFFFF"
+            >Partner Channel</vs-button
+          ></router-link
+        >
       </vs-navbar-item>
     </vs-navbar>
-
   </div>
 </template>
 
@@ -31,5 +43,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

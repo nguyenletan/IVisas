@@ -19,6 +19,10 @@ import TranscriptRequestForm from "./views/TranscriptRequestForm";
 import JobApplicationForm from "./views/JobApplicationForm";
 import VerifyJobApplicationForm from "./views/VerifyJobApplicationForm";
 import VerifyTranscriptRequestForm from "./views/VerifyTranscriptRequestForm";
+import UserNotification from "./views/UserNotification";
+import OpenCompanyDocument from "./views/OpenCompanyDocument";
+import OpenEducationDocument from "./views/OpenEducationDocument";
+import OpenGovernmentDocument from "./views/OpenGovernmentDocument";
 
 Vue.use(Router);
 
@@ -35,6 +39,26 @@ export default new Router({
       path: "/user-dashboard",
       name: "UserDashboard",
       component: UserDashboard
+    },
+    {
+      path: "/user-notification",
+      name: "UserNotification",
+      component: UserNotification
+    },
+    {
+      path: "/open-company-document",
+      name: "OpenCompanyDocument",
+      component: OpenCompanyDocument
+    },
+    {
+      path: "/open-education-document",
+      name: "OpenEducationDocument",
+      component: OpenEducationDocument
+    },
+    {
+      path: "/open-government-document",
+      name: "OpenGovernmentDocument",
+      component: OpenGovernmentDocument
     },
     {
       path: "/my-wallet",

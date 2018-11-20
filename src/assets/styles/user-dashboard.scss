@@ -1,4 +1,11 @@
-#user-dashboard, #my-wallet {
+@import "variables";
+
+#user-dashboard,
+#my-wallet,
+#user-notification,
+#open-company-document,
+#open-education-document,
+#open-government-document {
   .dashboard-content {
     min-height: 100%;
     background: #fff;
@@ -34,7 +41,7 @@
       }
       .v-card {
         //margin-bottom: 5vh;
-        min-width: 31%
+        min-width: 31%;
       }
       .v-toolbar {
         box-shadow: none;
@@ -58,5 +65,91 @@
         width: 100%;
       }
     }
+    .material-icons.yellow-star,
+    .material-icons.black-star {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      line-height: 42px;
+      height: 42px;
+      vertical-align: top;
+    }
+    .material-icons.yellow-star {
+      color: $yellow-color;
+    }
+
+    .material-icons.black-star {
+      color: #b3b3b3;
+    }
+
+    .main-divider-desc {
+      color: #b3b3b3;
+      font-size: 0.8em;
+      padding-left: 1em;
+    }
+  }
+}
+
+#user-notification,
+#open-company-document,
+#open-education-document,
+#open-government-document {
+  .list-titles {
+    font-size: 14px;
+  }
+
+  .vs-list--item {
+    border-bottom: 0px solid #fff;
+  }
+  .list-description {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0px 5px 20px 36px;
+    font-size: 12px;
+  }
+}
+
+#open-company-document,
+#open-education-document,
+#open-government-document {
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+  }
+
+  .main-divider-icon {
+    margin-right: 5%;
+    .material-icons {
+      border: 1px solid #b3b3b3;
+      color: #b3b3b3;
+      margin-right: 2px;
+      &.hightlight-color {
+        color: $button-background;
+      }
+    }
+  }
+  .dashboard-content .main-divider-title {
+    color: #b3b3b3;
+  }
+  .radio-wrapper {
+    width: 23px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    .con-vs-radio {
+      height: 62px;
+      margin: 0;
+    }
+  }
+  .list-item-wrapper {
+    width: calc(100% - 100px);
+    display: inline-block;
+  }
+  .list-description {
+    padding-left: 50px;
+    justify-content: space-between;
+    display: flex;
+  }
+  .text-description {
   }
 }

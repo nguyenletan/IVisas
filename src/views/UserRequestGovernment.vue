@@ -1,22 +1,39 @@
 <template>
-
   <div id="user-request-government">
     <div class="back-link container">
-      <a @click="$router.go(-1)" href="javascript:void(0);">Back</a>
+      <a @click="$router.go(-1);" href="javascript:void(0);">Back</a>
     </div>
     <div class="container container-border">
-      <img class="ddr-img" src="@/assets/images/ddr.png" alt="DDR"/>
+      <img class="ddr-img" src="@/assets/images/ddr.png" alt="DDR" />
       <h1>Choose your request</h1>
       <ul class="request-options">
-        <li><vs-radio name="requestOption" v-model="requestOption" value="1">Request digital national ID.</vs-radio></li>
-        <li><vs-radio name="requestOption" v-model="requestOption" value="2">Request digital birth certificate.</vs-radio></li>
-        <li><vs-radio class="other-option" name="requestOption" v-model="requestOption" value="0">Other:</vs-radio>
-        <vs-textarea v-model="otherOption"></vs-textarea>
+        <li>
+          <vs-radio name="requestOption" v-model="requestOption" value="1"
+            >Request digital national ID.</vs-radio
+          >
+        </li>
+        <li>
+          <vs-radio name="requestOption" v-model="requestOption" value="2"
+            >Request digital birth certificate.</vs-radio
+          >
+        </li>
+        <li>
+          <vs-radio
+            class="other-option"
+            name="requestOption"
+            v-model="requestOption"
+            value="0"
+            >Other:</vs-radio
+          >
+          <vs-textarea v-model="otherOption"></vs-textarea>
         </li>
       </ul>
-      <img src="@/assets/images/next-btn.png" alt="next button" class="next-btn"/>
+      <img
+        src="@/assets/images/next-btn.png"
+        alt="next button"
+        class="next-btn"
+      />
     </div>
-
   </div>
 </template>
 
@@ -35,5 +52,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
