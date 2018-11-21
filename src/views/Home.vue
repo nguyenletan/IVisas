@@ -5,22 +5,7 @@
       <div class="row">
         <div class="col-md-5 col-sm-12">
           <div class="title row">
-            <div class="col-8">
-              <h1>
-                <img
-                  src="@/assets/images/iVisas.png"
-                  alt="iVisas"
-                  title="iVisas"
-                />
-              </h1>
-            </div>
-            <div class="col-4 text-right d-sm-none d-md-block">
-              <img
-                class="flower"
-                src="@/assets/images/flowers.png"
-                alt="flowers"
-              />
-            </div>
+            <div class="col-8"><h1>iVisas</h1></div>
           </div>
           <p class="sub-header">Identity management for the Internet</p>
           <p class="header-description">
@@ -28,19 +13,11 @@
             of information about an entity's background such as a name,
             government ID, payment provider, home address, or university degree.
           </p>
-          <div class="feature row">
-            <div class="offset-md-1 col-md-8 col-sm-12 text-center">
-              <img
-                src="@/assets/images/features.png"
-                alt="features"
-                class="home-features"
-              />
-            </div>
-          </div>
-          <div class="row mt-5">
-            <div class="offset-md-0 col-md-10 col-sm-12 text-center">
+
+          <div class="row mt-4">
+            <div class="offset-md-0 col">
               <router-link to="/user-registration">
-                <vs-button class="very-big-btn register-btn "
+                <vs-button class="big-btn register-btn home-btn"
                   >Register now</vs-button
                 >
               </router-link>
@@ -62,7 +39,7 @@ import "@/assets/styles/home.scss";
 import MainHeader from "@/components/MainHeader";
 
 export default {
-  name: "home",
+  name: "home-new",
   components: {
     MainHeader
   }
