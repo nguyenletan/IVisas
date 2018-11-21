@@ -2,25 +2,27 @@
 
 #home {
   height: 100vh;
-  min-height: 700px;
+  min-height: 600px;
   color: $home_color;
-  background: url("../images/home.png") $home_background right bottom;
-  background-size: auto 70%;
+  background: url("../images/home.png") $home_color bottom left;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-left: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
 
   h1 {
-    font-size: 70px;
-    font-weight: 900;
-    color: $active-color;
+    font-size: 80px;
+    font-weight: 700;
+    color: $new-active-color;
     line-height: 1;
+    margin-top: 50px;
     img {
       height: 70px;
     }
   }
 
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .flower {
@@ -37,7 +39,7 @@
   .header-description {
     margin-top: 20px;
     font-size: 14px;
-    font-style: italic;
+    color: $new-active-color;
     // padding-right: 15px;
   }
 
@@ -55,14 +57,17 @@
   }
 
   .sign-in {
-    color: $active-color;
+    color: $home-link-color;
+    font-weight: 900;
   }
   .already-account {
     font-size: 14px;
+    color: $new-active-color;
+    margin-left: 60px;
   }
 
 }
-
+/*
 @media (min-width: 1280px) {
   .logo {
     margin-left: -20px;
@@ -157,4 +162,9 @@
     }
 
   }
+}*/
+
+
+#home-new {
+
 }

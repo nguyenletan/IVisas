@@ -5,8 +5,8 @@
   .vs-navbar--item {
     margin-right: 50px;
     a {
-      font-size: 16px !important;
-      color: $home_color !important;
+      font-size: 14px !important;
+      color: $new-active-color !important;
       font-weight: 400;
       line-height: 1;
       span {
@@ -15,7 +15,7 @@
         padding-left: 7px;
       }
       i {
-        color: $active-color;
+        color: $new-active-color;
       }
       span,
       i {
@@ -30,7 +30,7 @@
       padding: 5px 15px;
     }
     .router-link-active {
-      color: $active-color !important;
+      color: $new-active-color !important;
       font-weight: 700;
     }
     .menu-icon {
@@ -43,6 +43,6 @@
 }
 
 header.vs-navbar .vs-navbar-item-primary:hover > a {
-  color: $active-color !important;
+  color: $new-active-color !important;
   font-weight: 700;
 }

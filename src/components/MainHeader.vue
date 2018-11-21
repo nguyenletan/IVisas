@@ -2,7 +2,7 @@
   <div>
     <vs-navbar type="fund">
       <vs-navbar-title
-        ><img class="logo" src="@/assets/images/logo.png"
+        ><img class="logo" src="@/assets/images/logo-without-shadow.png"
       /></vs-navbar-title>
       <vs-spacer></vs-spacer>
       <vs-navbar-item index="0">
@@ -26,8 +26,8 @@
             size="medium"
             class="partner-channel-btn"
             type="border"
-            color-text="#FFFFFF"
-            color="#FFFFFF"
+            color-text="#30507C"
+            color="#30507C"
             >Partner Channel</vs-button
           ></router-link
         >

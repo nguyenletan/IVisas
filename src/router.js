@@ -4,6 +4,7 @@ import ConnectedUser from "./views/ConnectedUser";
 import FillInformationForGovernment from "./views/FillInformationForGovernment";
 import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
 import Home from "./views/Home.vue";
+import HomeNew from "./views/Home-New.vue";
 import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
 import UserConnecting from "./views/UserConnecting";
@@ -35,6 +36,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/home-new",
+      name: "home-new",
+      component: HomeNew
     },
     {
       path: "/user-dashboard",
