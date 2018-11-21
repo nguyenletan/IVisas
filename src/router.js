@@ -23,6 +23,7 @@ import UserNotification from "./views/UserNotification";
 import OpenCompanyDocument from "./views/OpenCompanyDocument";
 import OpenEducationDocument from "./views/OpenEducationDocument";
 import OpenGovernmentDocument from "./views/OpenGovernmentDocument";
+import SiteMap from "./views/Sitemap";
 
 Vue.use(Router);
 
@@ -37,27 +38,32 @@ export default new Router({
     },
     {
       path: "/user-dashboard",
-      name: "UserDashboard",
+      name: "userDashboard",
       component: UserDashboard
     },
     {
+      path: "/sitemap",
+      name: "siteMap",
+      component: SiteMap
+    },
+    {
       path: "/user-notification",
-      name: "UserNotification",
+      name: "userNotification",
       component: UserNotification
     },
     {
       path: "/open-company-document",
-      name: "OpenCompanyDocument",
+      name: "openCompanyDocument",
       component: OpenCompanyDocument
     },
     {
       path: "/open-education-document",
-      name: "OpenEducationDocument",
+      name: "openEducationDocument",
       component: OpenEducationDocument
     },
     {
       path: "/open-government-document",
-      name: "OpenGovernmentDocument",
+      name: "openGovernmentDocument",
       component: OpenGovernmentDocument
     },
     {
@@ -67,17 +73,17 @@ export default new Router({
     },
     {
       path: "/digital-national-id-doc",
-      name: "DigitalNationalIdDoc",
+      name: "digitalNationalIdDoc",
       component: DigitalNationalIdDoc
     },
     {
       path: "/job-application-form",
-      name: "JobApplicationForm",
+      name: "jobApplicationForm",
       component: JobApplicationForm
     },
     {
       path: "/verify-job-application-form",
-      name: "VerifyJobApplicationForm",
+      name: "verifyJobApplicationForm",
       component: VerifyJobApplicationForm
     },
     {
@@ -87,62 +93,62 @@ export default new Router({
     },
     {
       path: "/register-success",
-      name: "RegisterSuccess",
+      name: "registerSuccess",
       component: RegisterSuccess
     },
     {
       path: "/user-registration",
-      name: "UserRegistration",
+      name: "userRegistration",
       component: UserRegistration
     },
     {
       path: "/connected-user",
-      name: "ConnectedUser",
+      name: "connectedUser",
       component: ConnectedUser
     },
     {
       path: "/user-send-request-successfully",
-      name: "UserSendRequestSuccessfully",
+      name: "userSendRequestSuccessfully",
       component: UserSendRequestSuccessfully
     },
     {
       path: "/user-connecting",
-      name: "UserConnecting",
+      name: "userConnecting",
       component: UserConnecting
     },
     {
       path: "/user-request-government",
-      name: "UserRequestGovernment",
+      name: "userRequestGovernment",
       component: UserRequestGovernment
     },
     {
       path: "/user-request-company",
-      name: "UserRequestCompany",
+      name: "userRequestCompany",
       component: UserRequestCompany
     },
     {
       path: "/user-request-university",
-      name: "UserRequestUniversity",
+      name: "userRequestUniversity",
       component: UserRequestUniversity
     },
     {
       path: "/fill-information-for-government",
-      name: "FillInformationForGovernment",
+      name: "fillInformationForGovernment",
       component: FillInformationForGovernment
     },
     {
       path: "/partner-channel",
-      name: "PartnerChannel",
+      name: "partnerChannel",
       component: PartnerChannel
     },
     {
       path: "/transcript-request-form",
-      name: "TranscriptRequestForm",
+      name: "transcriptRequestForm",
       component: TranscriptRequestForm
     },
     {
       path: "/verify-transcript-request-form",
-      name: "VerifyTranscriptRequestForm",
+      name: "verifyTranscriptRequestForm",
       component: VerifyTranscriptRequestForm
     },
     {
