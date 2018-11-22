@@ -4,7 +4,7 @@
       <vs-navbar-title
         ><img class="logo" src="@/assets/images/logo-without-shadow.png"
       /></vs-navbar-title>
-      <vs-spacer></vs-spacer>
+      <vs-spacer class="d-none d-sm-block"></vs-spacer>
       <vs-navbar-item index="0">
         <router-link to="/"
           ><i class="material-icons">home</i><span>Home</span></router-link

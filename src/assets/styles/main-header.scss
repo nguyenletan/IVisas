@@ -2,8 +2,10 @@
 
 .vs-navbar {
   color: $home_color;
+  flex-wrap: wrap;
+  justify-content: space-around;
   .vs-navbar--item {
-    margin-right: 50px;
+    margin-right: 2%;
     a {
       font-size: 14px !important;
       color: $new-active-color !important;
