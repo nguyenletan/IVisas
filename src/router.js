@@ -3,6 +3,7 @@ import Router from "vue-router";
 import ConnectedUser from "./views/ConnectedUser";
 import FillInformationForGovernment from "./views/FillInformationForGovernment";
 import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
+import PayslipFromCompany from "./views/PayslipFromCompany";
 import Home from "./views/Home.vue";
 import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
@@ -75,6 +76,11 @@ export default new Router({
       path: "/digital-national-id-doc",
       name: "digitalNationalIdDoc",
       component: DigitalNationalIdDoc
+    },
+    {
+      path: "/payslip-from-company",
+      name: "payslipFromCompany",
+      component: PayslipFromCompany
     },
     {
       path: "/job-application-form",
@@ -150,15 +156,15 @@ export default new Router({
       path: "/verify-transcript-request-form",
       name: "verifyTranscriptRequestForm",
       component: VerifyTranscriptRequestForm
-    },
-    {
+    }
+  ]
+});
+/* {
       path: "/about",
       name: "about",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
-  ]
-});
+        import(/!* webpackChunkName: "about" *!/ "./views/About.vue")
+    }*/

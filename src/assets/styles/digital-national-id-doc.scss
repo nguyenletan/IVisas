@@ -1,6 +1,7 @@
 @import "variables";
 
-#digital-national-id-doc {
+#digital-national-id-doc,
+#payslip-from-company {
   color: #000;
   margin-top: 2vh;
   .ddr-logo {
@@ -86,5 +87,12 @@
 
   .container.container-border {
     max-height: 100%;
+  }
+  table {
+    font-size: 13px;
+  }
+  .note {
+    font-size: 13px;
+    font-weight: 700;
   }
 }
