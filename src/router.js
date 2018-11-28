@@ -1,13 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
-import ConnectedUser from "./views/ConnectedUser";
+import UserWantToConnectToGovernment from "./views/UserWantToConnectToGovernment";
+import UserWantToConnectToCorporation from "./views/UserWantToConnectToCorporation";
+import UserWantToConnectToUniversity from "./views/UserWantToConnectToUniversity";
 import FillInformationForGovernment from "./views/FillInformationForGovernment";
 import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
 import PayslipFromCompany from "./views/PayslipFromCompany";
 import Home from "./views/Home.vue";
 import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
-import UserConnecting from "./views/UserConnecting";
+import ConnectedUser from "./views/ConnectedUser";
 import UserDashboard from "./views/UserDashboard";
 import MyWallet from "./views/MyWallet";
 import UserRegistration from "./views/UserRegistration";
@@ -108,9 +110,19 @@ export default new Router({
       component: UserRegistration
     },
     {
-      path: "/connected-user",
-      name: "connectedUser",
-      component: ConnectedUser
+      path: "/user-want-to-connect-to-government",
+      name: "userWantToConnectToGovernment",
+      component: UserWantToConnectToGovernment
+    },
+    {
+      path: "/user-want-to-connect-to-corporation",
+      name: "userWantToConnectToCorporation",
+      component: UserWantToConnectToCorporation
+    },
+    {
+      path: "/user-want-to-connect-to-university",
+      name: "userWantToConnectToUniversity",
+      component: UserWantToConnectToUniversity
     },
     {
       path: "/user-send-request-successfully",
@@ -118,9 +130,9 @@ export default new Router({
       component: UserSendRequestSuccessfully
     },
     {
-      path: "/user-connecting",
-      name: "userConnecting",
-      component: UserConnecting
+      path: "/connected-user",
+      name: "connectedUser",
+      component: ConnectedUser
     },
     {
       path: "/user-request-government",

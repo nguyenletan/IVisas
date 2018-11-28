@@ -41,6 +41,7 @@
         src="@/assets/images/next-btn.png"
         alt="next button"
         class="next-btn"
+        @click="onClick"
       />
     </div>
   </div>
@@ -57,7 +58,11 @@ export default {
       otherOption: ""
     };
   },
-  methods: {}
+  methods: {
+    onClick: function () {
+      this.$router.push("transcript-request-form");
+    }
+  }
 };
 </script>
 

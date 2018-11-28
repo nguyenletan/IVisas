@@ -70,7 +70,11 @@ export default {
     submit(e) {
       //this.$validator.validateAll();
       e.preventDefault();
+
       let that = this;
+      ///TODO: should remove when backend done!
+      that.$router.push("user-dashboard");
+
       let api_url = process.env.VUE_APP_HYPERLEDGER_API + "login";
 
       this.$validator.validateAll().then(result => {

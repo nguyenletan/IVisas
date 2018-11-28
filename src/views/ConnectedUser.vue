@@ -1,11 +1,13 @@
 <template>
-  <div class="text-center" id="connected-user">
-    <img
-      class="embed-responsive"
-      src="@/assets/images/connected.png"
-      alt="connected image"
-    />
-    <h1>Connected!</h1>
+  <div class="connected-user-wrapper" @click="onClick">
+    <div class="text-center" id="connected-user">
+      <img
+        class="embed-responsive"
+        src="@/assets/images/connected.png"
+        alt="connected image"
+      />
+      <h1>Connected!</h1>
+    </div>
   </div>
 </template>
 
@@ -13,11 +15,35 @@
 import "@/assets/styles/register-and-send-request-success.scss";
 
 export default {
-  name: "ConnectedUser"
+  name: "ConnectedUser",
+  methods: {
+    onClick: function() {
+      switch (this.$store.state.connectedTo) {
+        case "Government Agency":
+          this.$router.push("user-request-government");
+          break;
+
+        case "Education Institution":
+          this.$router.push("user-request-university");
+          break;
+
+        case "Registered Corporation":
+          this.$router.push("user-request-company");
+          break;
+        default:
+          break;
+      }
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
+.connected-user-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
 #connected-user {
   position: fixed;
   top: 45%;

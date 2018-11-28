@@ -94,6 +94,10 @@ export default {
     submit(e) {
       e.preventDefault();
       let that = this;
+
+      ///TODO: should remove when backend done!
+      that.$router.push("register-success");
+
       this.$validator.validateAll().then(result => {
         this.isValid = !!result;
         if (this.isValid === true) {

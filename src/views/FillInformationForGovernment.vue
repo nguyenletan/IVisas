@@ -201,7 +201,7 @@
           </div>
         </div>
         <div class="row mt-5 mb-4">
-          <input type="submit" class="send-request-btn" value="Send Request" />
+          <input type="submit" class="send-request-btn" value="Send Request"/>
         </div>
       </form>
     </div>
@@ -258,6 +258,7 @@ export default {
       this.$validator.validateAll().then(result => {
         if (result) {
           // isValid == true
+          this.$router.push("user-send-request-successfully");
           return;
         }
       });

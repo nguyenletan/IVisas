@@ -122,9 +122,13 @@ export default {
     submit: function(e) {
       e.preventDefault();
       // let that = this;
+
       this.$validator.validateAll().then(result => {
         this.isValid = !!result;
         if (this.isValid === true) {
+          this.$router.push("user-send-request-successfully");
+          return;
+
           let api_url =
             process.env.VUE_APP_HYPERLEDGER_API + "transcript-request";
           this.callFecth(
