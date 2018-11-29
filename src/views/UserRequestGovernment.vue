@@ -50,7 +50,7 @@ export default {
     };
   },
   methods: {
-    onClick: function () {
+    onClick: function() {
       this.$router.push("fill-information-for-government");
     }
   }

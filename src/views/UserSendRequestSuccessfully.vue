@@ -18,6 +18,7 @@
           src="@/assets/images/next-btn.png"
           alt="next button"
           class="next-btn"
+          @click="onClick"
         />
       </div>
     </div>
@@ -28,7 +29,12 @@
 import "@/assets/styles/register-and-send-request-success.scss";
 
 export default {
-  name: "RegisterSuccess"
+  name: "RegisterSuccess",
+  methods: {
+    onClick: function() {
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 

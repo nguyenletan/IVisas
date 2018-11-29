@@ -12,17 +12,17 @@
       <h1>Choose your request</h1>
       <ul class="request-options">
         <li>
-          <vs-radio name="requestOption" v-model="requestOption" value="1"
+          <vs-radio name="requestOption" v-model="requestOption" vs-value="1"
             >Apply for a job.</vs-radio
           >
         </li>
         <li>
-          <vs-radio name="requestOption" v-model="requestOption" value="2"
+          <vs-radio name="requestOption" v-model="requestOption" vs-value="2"
             >Get the payslip.</vs-radio
           >
         </li>
         <li>
-          <vs-radio name="requestOption" v-model="requestOption" value="2"
+          <vs-radio name="requestOption" v-model="requestOption" vs-value="3"
             >Create job certificate credential request.</vs-radio
           >
         </li>
@@ -31,16 +31,20 @@
             class="other-option"
             name="requestOption"
             v-model="requestOption"
-            value="0"
+            vs-value="0"
             >Other:</vs-radio
           >
-          <vs-textarea v-model="otherOption"></vs-textarea>
+          <vs-textarea
+            :disabled="requestOption > 0"
+            v-model="otherOption"
+          ></vs-textarea>
         </li>
       </ul>
       <img
         src="@/assets/images/next-btn.png"
         alt="next button"
         class="next-btn"
+        @click="onClick"
       />
     </div>
   </div>
@@ -53,11 +57,29 @@ export default {
   name: "UserRequestCompany",
   data: function() {
     return {
-      requestOption: 1,
+      requestOption: "0",
       otherOption: ""
     };
   },
-  methods: {}
+  methods: {
+    onClick: function() {
+      console.log(this.requestOption);
+      switch (this.requestOption) {
+        case "0":
+          break;
+        case "1":
+          this.$router.push("job-application-form");
+          break;
+        case "2":
+          this.$router.push("fill-information-for-payslip");
+          break;
+        case "3":
+          break;
+        default:
+          break;
+      }
+    }
+  }
 };
 </script>
 

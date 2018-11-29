@@ -45,17 +45,60 @@
 
         <div class="row justify-content-center">
           <div class="col-8 m-auto">
-            <vs-input
-              name="date-of-birth"
-              v-validate="'required'"
-              placeholder="Date of Birth"
-              data-vv-name="date-of-birth"
-              v-model="dateOfBirth"
-              size="large"
-              class="light-input"
-              danger-text="The Date of Birth is required"
-              :danger="errors.has('date-of-birth')"
-            />
+            <v-dialog
+              ref="dialog1"
+              v-model="modalOfDOB"
+              :return-value.sync="dateOfBirth"
+              persistent
+              lazy
+              full-width
+              width="290px"
+            >
+              <vs-input
+                slot="activator"
+                name="date-of-birth"
+                v-validate="'required'"
+                label="Date Of Birth"
+                placeholder="Date Of Birth"
+                v-model="computedDateFormatted"
+                danger-text="The date of birth is required"
+                size="large"
+                class="light-input"
+                :danger="errors.has('date-of-birth')"
+                icon-after="true"
+                icon="calendar_today"
+              />
+
+              <v-date-picker
+                v-model="dateOfBirth"
+                scrollable
+                header-color="#0C63B7"
+              >
+                <v-spacer></v-spacer>
+                <v-btn flat color="primary" @click="modalOfDOB = false;"
+                  >Cancel</v-btn
+                >
+                <v-btn
+                  flat
+                  color="primary"
+                  @click="$refs.dialog1.save(dateOfBirth);"
+                  >OK</v-btn
+                >
+              </v-date-picker>
+            </v-dialog>
+            <!--
+              <vs-input
+                name="date-of-birth"
+                v-validate="'required'"
+                placeholder="Date of Birth"
+                data-vv-name="date-of-birth"
+                v-model="dateOfBirth"
+                size="large"
+                class="light-input"
+                danger-text="The Date of Birth is required"
+                :danger="errors.has('date-of-birth')"
+              />
+            -->
           </div>
         </div>
 
@@ -115,8 +158,15 @@ export default {
       nationalId: null,
       placeOfBirth: null,
       dateOfBirth: null,
-      graduationStatus: null
+      graduationStatus: null,
+      modalOfDOB: false
     };
+  },
+  computed: {
+    computedDateFormatted() {
+      //this.dobFormatted = this.formatDate(this.dateOfBirth);
+      return this.formatDate(this.dateOfBirth);
+    }
   },
   methods: {
     submit: function(e) {
@@ -129,7 +179,7 @@ export default {
           this.$router.push("user-send-request-successfully");
           return;
 
-          let api_url =
+          /*let api_url =
             process.env.VUE_APP_HYPERLEDGER_API + "transcript-request";
           this.callFecth(
             api_url,
@@ -143,9 +193,21 @@ export default {
             function() {
               // that.$router.push("register-success");
             }
-          );
+          );*/
         }
       });
+    },
+    formatDate(date) {
+      if (!date) return null;
+
+      const [year, month, day] = date.split("-");
+      return `${day}/${month}/${year}`;
+    },
+    parseDate(date) {
+      if (!date) return null;
+
+      const [month, day, year] = date.split("/");
+      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
     }
   }
 };

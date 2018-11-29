@@ -152,7 +152,8 @@ export default {
       this.$validator.validateAll().then(result => {
         this.isValid = !!result;
         if (this.isValid === true) {
-          let api_url = process.env.VUE_APP_HYPERLEDGER_API + "job-application";
+          this.$router.push("user-send-request-successfully");
+          /*let api_url = process.env.VUE_APP_HYPERLEDGER_API + "job-application";
           this.callFecth(
             api_url,
             {
@@ -165,7 +166,7 @@ export default {
             function() {
               // that.$router.push("register-success");
             }
-          );
+          );*/
         }
       });
     }

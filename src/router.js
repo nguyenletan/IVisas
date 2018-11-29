@@ -4,6 +4,7 @@ import UserWantToConnectToGovernment from "./views/UserWantToConnectToGovernment
 import UserWantToConnectToCorporation from "./views/UserWantToConnectToCorporation";
 import UserWantToConnectToUniversity from "./views/UserWantToConnectToUniversity";
 import FillInformationForGovernment from "./views/FillInformationForGovernment";
+import FillInformationForPayslip from "./views/FillInformationForPayslip";
 import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
 import PayslipFromCompany from "./views/PayslipFromCompany";
 import Home from "./views/Home.vue";
@@ -153,6 +154,11 @@ export default new Router({
       path: "/fill-information-for-government",
       name: "fillInformationForGovernment",
       component: FillInformationForGovernment
+    },
+    {
+      path: "/fill-information-for-payslip",
+      name: "fillInformationForPayslip",
+      component: FillInformationForPayslip
     },
     {
       path: "/partner-channel",

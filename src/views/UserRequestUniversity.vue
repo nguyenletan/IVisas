@@ -59,7 +59,7 @@ export default {
     };
   },
   methods: {
-    onClick: function () {
+    onClick: function() {
       this.$router.push("transcript-request-form");
     }
   }

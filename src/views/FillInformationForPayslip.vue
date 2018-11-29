@@ -1,5 +1,5 @@
 <template>
-  <div id="fill-information-for-government">
+  <div id="fill-information-for-payslip">
     <div class="back-link container">
       <a @click="$router.go(-1);" href="javascript:void(0);">Back</a>
     </div>
@@ -118,8 +118,8 @@
           <div class="col-4">
             <v-dialog
               ref="dialog2"
-              v-model="modalOfIssuedDate"
-              :return-value.sync="issuedDate"
+              v-model="modalOfStartWorkDate"
+              :return-value.sync="startWorkDate"
               persistent
               lazy
               full-width
@@ -127,30 +127,33 @@
             >
               <vs-input
                 slot="activator"
-                name="issued-date"
+                name="date-start-work"
                 v-validate="'required'"
-                label="Issued Date"
-                placeholder="Issue Date"
-                v-model="issuedDate"
-                danger-text="The issued date is required"
-                :danger="errors.has('issued-date')"
+                label="Date Start Work"
+                placeholder="Date Start Work"
+                v-model="startWorkDate"
+                danger-text="The date-start-work is required"
+                :danger="errors.has('date-start-work')"
                 icon-after="true"
                 icon="calendar_today"
               />
 
               <v-date-picker
-                v-model="issuedDate"
+                v-model="startWorkDate"
                 scrollable
                 header-color="#0C63B7"
               >
                 <v-spacer></v-spacer>
-                <v-btn flat color="primary" @click="modalOfIssuedDate = false;"
+                <v-btn
+                  flat
+                  color="primary"
+                  @click="modalOfStartWorkDate = false;"
                   >Cancel</v-btn
                 >
                 <v-btn
                   flat
                   color="primary"
-                  @click="$refs.dialog2.save(issuedDate);"
+                  @click="$refs.dialog2.save(startWorkDate);"
                   >OK</v-btn
                 >
               </v-date-picker>
@@ -158,48 +161,17 @@
           </div>
           <div class="col-4 offset-0">
             <vs-input
-              name="issued-by"
+              name="staff-code"
               v-validate="'required'"
-              label="Issued By"
-              placeholder="Issued By"
-              v-model="issuedBy"
-              danger-text="The Issued By is required"
-              :danger="errors.has('issued-by')"
+              label="Staff Code"
+              placeholder="Staff Code"
+              v-model="staffCode"
+              danger-text="The Staff Code is required"
+              :danger="errors.has('staff-code')"
             />
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-1">
-            <label class="upload-file-label"
-              >File<span class="red--text">*</span></label
-            >
-          </div>
-          <!--
-            <div class="offset-0 col">
-              <vs-upload :v-bind:single-upload="true" text="Choose a file..." action="https://jsonplaceholder.typicode.com/posts/" @on-success="successUpload" />
-            </div>
-          -->
-        </div>
-        <!--
-          <div class="row mt-4">
-            <div class="col-1">
-              <label class="upload-file-label">Or</label>
-            </div>
-          </div>
-        -->
-        <div class="row mt-5">
-          <div class="col">
-            <div class="dropzone-wrapper">
-              <vue-dropzone
-                ref="uploadVueDropzone"
-                id="dropzone"
-                :options="dropzoneOptions"
-                @vdropzone-success="onUpload"
-              >
-              </vue-dropzone>
-            </div>
-          </div>
-        </div>
+
         <div class="row mt-5 mb-4">
           <input type="submit" class="send-request-btn" value="Send Request" />
         </div>
@@ -213,7 +185,7 @@ import "@/assets/styles/forms.scss";
 import vue2Dropzone from "vue2-dropzone";
 import "vue2-dropzone/dist/vue2Dropzone.min.css";
 export default {
-  name: "FillInformationForGovernment",
+  name: "FillInformationForPayslip",
   components: {
     vueDropzone: vue2Dropzone
   },
@@ -226,11 +198,11 @@ export default {
       placeOfBirth: null,
       idNumber: null,
       address: "",
-      issuedDate: null,
-      issuedBy: null,
+      startWorkDate: null,
+      staffCode: null,
       dobFormatted: null,
       modalOfDOB: false,
-      modalOfIssuedDate: false,
+      modalOfStartWorkDate: false,
       dropzoneOptions: {
         url:
           "http://janison2.southeastasia.cloudapp.azure.com:8000/predictbinary",
@@ -253,7 +225,6 @@ export default {
     }
   },
   methods: {
-    onUpload: function(/*file, respond*/) {},
     validateBeforeSubmit() {
       this.$validator.validateAll().then(result => {
         if (result) {
@@ -274,13 +245,6 @@ export default {
 
       const [month, day, year] = date.split("/");
       return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
-    },
-    successUpload() {
-      this.$vs.notify({
-        color: "success",
-        title: "Upload Success",
-        text: "Lorem ipsum dolor sit amet, consectetur"
-      });
     }
   }
 };
