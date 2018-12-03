@@ -19,7 +19,10 @@
           </v-toolbar>
           <v-list>
             <template v-for="(item, index) in government">
-              <v-list-tile :key="item.title">
+              <v-list-tile
+                :key="item.title"
+                @click="onClick($event, 'Government Agency')"
+              >
                 <v-list-tile-avatar>
                   <img
                     alt="logo"
@@ -45,11 +48,14 @@
 
         <v-card>
           <v-toolbar color="#8CC63F" dark height="50">
-            <v-toolbar-title>Education Agencies</v-toolbar-title>
+            <v-toolbar-title>Education Institutions</v-toolbar-title>
           </v-toolbar>
           <v-list>
             <template v-for="(item, index) in education">
-              <v-list-tile :key="item.title">
+              <v-list-tile
+                :key="item.title"
+                @click="onClick($event, 'Education Institution')"
+              >
                 <v-list-tile-avatar>
                   <img
                     alt="logo"
@@ -75,11 +81,14 @@
 
         <v-card>
           <v-toolbar color="#FFCB04" dark height="50">
-            <v-toolbar-title>Corporation Agencies</v-toolbar-title>
+            <v-toolbar-title>Registered Corporations</v-toolbar-title>
           </v-toolbar>
           <v-list>
             <template v-for="(item, index) in corporation">
-              <v-list-tile :key="item.title">
+              <v-list-tile
+                :key="item.title"
+                @click="onClick($event, 'Registered Corporation')"
+              >
                 <v-list-tile-avatar>
                   <img
                     alt="logo"
@@ -137,7 +146,28 @@ export default {
       }
     );
   },
+  methods: {
+    onClick: function(e, type) {
+      e.preventDefault;
+      console.log(type);
+      switch (type) {
+        case "Government Agency":
+          this.$router.push("open-government-document");
+          break;
 
+        case "Education Institution":
+          this.$router.push("open-education-document");
+          break;
+
+        case "Registered Corporation":
+          this.$router.push("open-company-document");
+          break;
+
+        default:
+          break;
+      }
+    }
+  },
   components: {
     SideBar
   }

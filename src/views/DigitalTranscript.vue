@@ -1,20 +1,11 @@
 <template>
-  <div id="payslip-from-company">
+  <div id="digital-transcript">
     <div class="back-link container">
       <a @click="$router.go(-1)" href="javascript:void(0);">Back</a>
     </div>
     <div class="container container-border">
-      <div class="row justify-content-between align-items-center" id="header">
-        <div class="col-auto">
-          <img class="ddr-logo" src="@/assets/images/ddr-doc.png" />
-        </div>
-        <div class="col-auto doc-no">
-          NO:&nbsp;<span class="underline"></span>
-        </div>
-      </div>
-
       <div class="content">
-        <h1>PAYSLIP FOR THE MONTH OF JAN 2017</h1>
+        <h1>DIGITAL TRANSCRIPT</h1>
         <div class="row">
           <div class="col">
             <table class="table table-bordered">
@@ -134,7 +125,7 @@
 import "@/assets/styles/digital-national-id-doc.scss";
 
 export default {
-  name: "PayslipFromCompany"
+  name: "DigitalTranscript"
 };
 </script>
 

@@ -7,6 +7,7 @@ import FillInformationForGovernment from "./views/FillInformationForGovernment";
 import FillInformationForPayslip from "./views/FillInformationForPayslip";
 import DigitalNationalIdDoc from "./views/DigitalNationalIdDocument";
 import PayslipFromCompany from "./views/PayslipFromCompany";
+import DigitalTranscript from "./views/DigitalTranscript";
 import Home from "./views/Home.vue";
 import Login from "./views/Login";
 import RegisterSuccess from "./views/RegisterSuccess";
@@ -72,7 +73,7 @@ export default new Router({
     },
     {
       path: "/my-wallet",
-      name: "MyWallet",
+      name: "myWallet",
       component: MyWallet
     },
     {
@@ -84,6 +85,11 @@ export default new Router({
       path: "/payslip-from-company",
       name: "payslipFromCompany",
       component: PayslipFromCompany
+    },
+    {
+      path: "/digital-transcript",
+      name: "digitalTranscript",
+      component: DigitalTranscript
     },
     {
       path: "/job-application-form",

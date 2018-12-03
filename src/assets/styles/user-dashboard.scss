@@ -94,6 +94,10 @@
 #open-company-document,
 #open-education-document,
 #open-government-document {
+  .vs-list {
+    cursor: pointer;
+  }
+
   .list-titles {
     font-size: 14px;
   }

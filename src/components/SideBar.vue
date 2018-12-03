@@ -8,20 +8,22 @@
       spacer
     >
       <div class="header-sidebar" slot="header">
-        <img class="logo" src="@/assets/images/logo-without-shadow.png" />
+        <router-link to="/"
+          ><img class="logo" src="@/assets/images/logo-without-shadow.png"
+        /></router-link>
         <vs-divider class="sidebar-divider" color="#1256B3"></vs-divider>
         <img class="avatar" src="@/assets/images/alice-avatar.png" />
         <p class="name">Alice London</p>
         <vs-divider class="sidebar-divider" color="#1256B3"></vs-divider>
       </div>
 
-      <vs-sidebar-item index="9" icon="notifications">
+      <vs-sidebar-item index="9" icon="notifications" to="/user-notification">
         NOTIFICATIONS
       </vs-sidebar-item>
 
-      <vs-sidebar-item index="2" icon="near_me">SENT</vs-sidebar-item>
+      <vs-sidebar-item index="2" icon="near_me"> SENT </vs-sidebar-item>
 
-      <vs-sidebar-item index="3" icon="account_balance_wallet">
+      <vs-sidebar-item index="3" icon="account_balance_wallet" to="/my-wallet">
         MY WALLET
       </vs-sidebar-item>
 
