@@ -1,5 +1,10 @@
 # hyperledger-mvp
 
+## ScreenShot
+
+![](https://github.com/nguyenletan/Landing-Page-Vue-Example/blob/master/public/img/screencapture.png?raw=true)
+
+
 ## Project setup
 ```
 npm install
